@@ -17,7 +17,7 @@ namespace WebForm
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection webformdb = new SqlConnection("Server=tcp:godinho-sql.database.windows.net,1433;Initial Catalog=webform;Persist Security Info=False;User ID=godinho;Password=Joao100580200213;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                SqlConnection webformdb = new SqlConnection("Server=tcp:godinho-sql.database.windows.net,1433;Initial Catalog=webform;Persist Security Info=False;User ID={Your Username};Password={Your Password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             {
                 SqlCommand insert = new SqlCommand("EXEC dbo.insertFullname @Fullname", webformdb);
                 insert.Parameters.AddWithValue("@fullname", TextBox1.Text);
